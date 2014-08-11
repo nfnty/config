@@ -1,13 +1,14 @@
 #!/bin/bash
-mkdir -p ~/.config
-rsync -a --delete .config/htop ~/.config
+mkdir -p "$HOME"/.config
+rsync -a --delete .config/htop "$HOME"/.config
 
-rsync -a --delete .vim ~ --exclude='.vim/undodir'
-ln -sf .vim/vimrc ~/.vimrc
+rsync -a --delete .vim "$HOME" --exclude='.vim/undodir'
+mkdir -p "$HOME"/.vim/undodir
+ln -sf .vim/vimrc "$HOME"/.vimrc
 
-rsync -a --delete .zprezto ~
-ln -sf .zprezto/runcoms/zlogin		~/.zlogin
-ln -sf .zprezto/runcoms/zpreztorc	~/.zpreztorc
-ln -sf .zprezto/runcoms/zprofile	~/.zprofile
-ln -sf .zprezto/runcoms/zshenv		~/.zshenv
-ln -sf .zprezto/runcoms/zshrc		~/.zshrc
+rsync -a --delete .zprezto "$HOME"
+ln -sf .zprezto/runcoms/zlogin		"$HOME"/.zlogin
+ln -sf .zprezto/runcoms/zpreztorc	"$HOME"/.zpreztorc
+ln -sf .zprezto/runcoms/zprofile	"$HOME"/.zprofile
+ln -sf .zprezto/runcoms/zshenv		"$HOME"/.zshenv
+ln -sf .zprezto/runcoms/zshrc		"$HOME"/.zshrc
