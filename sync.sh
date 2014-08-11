@@ -2,7 +2,7 @@
 mkdir -p ~/.config
 rsync -a --delete .config/htop ~/.config
 
-rsync -a --delete .vim ~ --exclude='/undodir'
+rsync -a --delete .vim ~ --exclude='.vim/undodir'
 ln -sf .vim/vimrc ~/.vimrc
 
 rsync -a --delete .zprezto ~
