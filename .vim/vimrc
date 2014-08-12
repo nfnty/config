@@ -11,7 +11,6 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 
 call vundle#end()
