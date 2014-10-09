@@ -1,0 +1,3 @@
+hardstatus alwayslastline "%{=b}%{b}%w%=%{r}%S %{W}@ %{G}%H"
+startup_message off
+term screen-256color
