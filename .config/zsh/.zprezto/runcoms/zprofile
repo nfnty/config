@@ -5,6 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+export SYSSCREENRC="$HOME/.config/screen.conf"
+
 #
 # Browser
 #
@@ -17,8 +19,8 @@
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+# export EDITOR='vim'
+# export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -66,12 +68,12 @@ export LESS='-F -i -M -R -w -X -z-4'
 #
 
 if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$USER"
-  mkdir -p -m 700 "$TMPDIR"
+	export TMPDIR="/tmp/$USER"
+	mkdir -p -m 700 "$TMPDIR"
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
-  mkdir -p "$TMPPREFIX"
+	mkdir -p "$TMPPREFIX"
 fi
 

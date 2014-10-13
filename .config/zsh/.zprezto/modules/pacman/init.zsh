@@ -54,6 +54,9 @@ alias pacX="${_pacman_sudo}${_pacman_frontend} --remove --nosave --recursive"
 # Displays information about a package from the repositories.
 alias pacq="${_pacman_frontend} --sync --info"
 
+# List files owned by package
+alias pacl="${_pacman_frontend} --query --list"
+
 # Displays information about a package from the local database.
 alias pacQ="${_pacman_frontend} --query --info"
 
