@@ -1,0 +1,35 @@
+#command
+e	forw-line
+u	back-line
+h	left-scroll
+t	right-scroll
+E	forw-scroll
+U	back-scroll
+H	left-scroll
+T	right-scroll
+^R	repaint-flush
+^L	repaint
+`	undo-hilite
+g	goto-line
+G	goto-end
+^G	status
+/	forw-search
+?	back-search
+n	repeat-search
+N	reverse-search
+f	filter
+m	set-mark
+'	goto-mark
+0	digit
+1	digit
+2	digit
+3	digit
+4	digit
+5	digit
+6	digit
+7	digit
+8	digit
+9	digit
+q	quit
+Q	quit
+#stop
