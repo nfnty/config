@@ -45,11 +45,11 @@ set -g status-interval 1
 set -g status-justify centre
 set -g status-keys vi
 set -g status-left "[#{session_name}] #{pane_title}"
-# set -g status-left-length 10
+set -g status-left-length 30
 # set -g status-left-style "default"
 # set -g status-position bottom
-set -g status-right "#{history_bytes} "
-# set -g status-right-length 40
+set -g status-right "#{history_bytes}"
+set -g status-right-length 30
 # set -g status-right-style "default"
 set -g status-style "bg=black,fg=colour167"
 # set -g status-utf8 off
