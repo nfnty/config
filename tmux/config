@@ -13,15 +13,15 @@ set -s set-clipboard off
 # set -g assume-paste-time 1
 # set -g base-index 0
 # set -g bell-action any
-# set -g bell-on-alert 0
+# set -g bell-on-alert off
 # set -g default-command ""
 # set -g default-shell $SHELL
 # set -g destroy-unattached off
 set -g detach-on-destroy off
 # set -g display-panes-active-colour 1
 # set -g display-panes-colour 4
-set -g display-panes-time 2000
-set -g display-time 2000
+# set -g display-panes-time 1000
+# set -g display-time 750
 set -g history-limit 500000
 # set -g lock-after-time 0
 # set -g lock-command "lock -np"
