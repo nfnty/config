@@ -125,7 +125,8 @@ bind N new-session
 bind y copy-mode
 bind p paste-buffer
 bind d detach-client
-bind r refresh-client
+bind r respawn-window
+bind R refresh-client
 bind t choose-tree
 bind w choose-window
 bind m show-messages
