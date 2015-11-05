@@ -17,7 +17,7 @@ set -s set-clipboard off
 # set -g default-command ""
 # set -g default-shell $SHELL
 # set -g destroy-unattached off
-set -g detach-on-destroy off
+# set -g detach-on-destroy on
 # set -g display-panes-active-colour 1
 # set -g display-panes-colour 4
 # set -g display-panes-time 1000
@@ -116,8 +116,8 @@ bind-key 7 select-window -t 7
 bind-key 8 select-window -t 8
 bind-key 9 select-window -t 9
 bind-key : command-prompt
-bind-key b choose-buffer
-bind-key B list-buffers
+bind-key '"' choose-buffer
+bind-key "'" list-buffers
 bind-key l last-window
 bind-key L switch-client -l
 bind-key n new-window
@@ -130,9 +130,9 @@ bind-key R refresh-client
 bind-key t choose-tree
 bind-key w choose-window
 bind-key m show-messages
-bind-key M display-message
 bind-key s set status
 bind-key q kill-window
+bind-key Q set -g detach-on-destroy off \; kill-window \; set -g detach-on-destroy on
 
 bind-key -t  vi-edit    C-c cancel
 bind-key -t  vi-edit    Tab complete
