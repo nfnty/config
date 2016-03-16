@@ -92,7 +92,7 @@ setw -g window-status-format "#{window_index}:#{window_name}#{?window_flags,#{wi
 # setw -g window-status-last-style "default"
 setw -g window-status-separator " "
 # setw -g window-status-style "default"
-# setw -g xterm-keys off
+setw -g xterm-keys off
 # setw -g wrap-search on
 
 unbind-key -a
