@@ -56,7 +56,7 @@ set -g visual-bell on
 # set -g visual-silence on
 # set -g word-separators " -_@"
 
-setw -g aggressive-resize on
+# setw -g aggressive-resize off
 # setw -g allow-rename on
 # setw -g alternate-screen on
 # setw -g automatic-rename on
