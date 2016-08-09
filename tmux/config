@@ -60,7 +60,7 @@ set -g visual-bell on
 # setw -g allow-rename on
 # setw -g alternate-screen on
 # setw -g automatic-rename on
-setw -g automatic-rename-format "#{pane_current_command}#{?pane_in_mode,[m],}#{?pane_dead,[d],}"
+setw -g automatic-rename-format "#{pane_current_command}"
 # setw -g c0-change-interval 100
 # setw -g c0-change-trigger 250
 # setw -g clock-mode-colour 4
@@ -86,9 +86,9 @@ setw -g mode-style "bg=black,fg=colour178"
 # setw -g window-style "default"
 # setw -g window-status-activity-style "reverse"
 # setw -g window-status-bell-style "reverse"
-setw -g window-status-current-format "#{window_index}:#{window_name}#{?window_flags,#{window_flags},}"
+setw -g window-status-current-format "#{window_index}:#{window_name}#{?pane_in_mode,[m],}#{?pane_dead,[d#{pane_dead_status}],}"
 # setw -g window-status-current-style "default"
-setw -g window-status-format "#{window_index}:#{window_name}#{?window_flags,#{window_flags},}"
+setw -g window-status-format "#{window_index}:#{window_name}#{?pane_in_mode,[m],}#{?pane_dead,[d#{pane_dead_status}],}"
 # setw -g window-status-last-style "default"
 setw -g window-status-separator " "
 # setw -g window-status-style "default"
