@@ -1,14 +1,11 @@
 # set -s buffer-limit 20
-# set -s default-terminal "screen"
+set -s default-terminal "screen-256color"
 set -s escape-time 0
 set -s exit-unattached off
 set -s focus-events off
 # set -s message-limit 100
 set -s set-clipboard off
-# set -s terminal-overrides "*256col*:colors=256"
-#                           ",xterm*:XT:Ms=\\E]52;%p1%s;%p2%s\\007"
-#                           ":Cs=\\E]12;%p1%s\\007:Cr=\\E]112\\007"
-#                           ":Ss=\\E[%p1%d q:Se=\\E[2 q,screen*:XT"
+set -s terminal-overrides "*256col*:colors=256,xterm*:XT,xterm-termite:Tc"
 
 # set -g assume-paste-time 1
 # set -g base-index 0
@@ -37,7 +34,7 @@ set -g repeat-time 0
 set -g set-remain-on-exit on
 set -g set-titles on
 set -g set-titles-string "#{session_name}:#{window_index}:#{window_name} - #{pane_title} #{session_alerts}"
-# set -g status on
+set -g status on
 set -g status-interval 1
 set -g status-justify centre
 set -g status-keys vi
@@ -56,7 +53,7 @@ set -g visual-bell on
 # set -g visual-silence on
 # set -g word-separators " -_@"
 
-# setw -g aggressive-resize off
+setw -g aggressive-resize on
 # setw -g allow-rename on
 # setw -g alternate-screen on
 # setw -g automatic-rename on
@@ -92,7 +89,7 @@ setw -g window-status-format "#{window_index}:#{window_name}#{?pane_in_mode,[m],
 # setw -g window-status-last-style "default"
 setw -g window-status-separator " "
 # setw -g window-status-style "default"
-setw -g xterm-keys off
+setw -g xterm-keys on
 # setw -g wrap-search on
 
 unbind-key -a
