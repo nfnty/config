@@ -1,12 +1,12 @@
 #command
-e	forw-line
-u	back-line
-h	left-scroll
-t	right-scroll
-E	forw-scroll
-U	back-scroll
-H	left-scroll
-T	right-scroll
+j	forw-line
+e	back-line
+o	left-scroll
+u	right-scroll
+\kd	forw-scroll
+\ku	back-scroll
+\kl	left-scroll
+\kr	right-scroll
 ^R	repaint-flush
 ^L	repaint
 `	undo-hilite
@@ -18,7 +18,7 @@ G	goto-end
 n	repeat-search
 N	reverse-search
 f	filter
-m	set-mark
+"	set-mark
 '	goto-mark
 0	digit
 1	digit

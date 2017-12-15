@@ -27,7 +27,7 @@ set -g message-command-style "bg=colour233,fg=colour178"
 set -g message-style "bg=black,fg=colour178"
 # set -g mouse off
 # set -g mouse-utf8 off
-set -g prefix C-o
+set -g prefix C-t
 # set -g prefix2 NULL
 # set -g renumber-windows off
 set -g repeat-time 0
@@ -98,7 +98,7 @@ unbind-key -a -ct vi-edit
 unbind-key -a -t vi-copy
 unbind-key -a -t vi-choice
 
-bind-key C-o send-prefix
+bind-key C-t send-prefix
 bind-key 0 select-window -t 0
 bind-key 1 select-window -t 1
 bind-key 2 select-window -t 2
@@ -150,7 +150,7 @@ bind-key -ct vi-edit      A switch-mode-append-line
 bind-key -ct vi-edit      B previous-space
 bind-key -ct vi-edit      C switch-mode-change-line
 bind-key -ct vi-edit      D delete-end-of-line
-bind-key -ct vi-edit      J next-space-end
+bind-key -ct vi-edit      H next-space-end
 bind-key -ct vi-edit      I switch-mode-begin-line
 bind-key -ct vi-edit      S switch-mode-substitute-line
 bind-key -ct vi-edit      W next-space
@@ -158,12 +158,12 @@ bind-key -ct vi-edit      ^ start-of-line
 bind-key -ct vi-edit      a switch-mode-append
 bind-key -ct vi-edit      b previous-word
 bind-key -ct vi-edit      d delete-line
-bind-key -ct vi-edit      j next-word-end
-bind-key -ct vi-edit      h cursor-left
+bind-key -ct vi-edit      h next-word-end
+bind-key -ct vi-edit      o cursor-left
 bind-key -ct vi-edit      i switch-mode
-bind-key -ct vi-edit      e history-down
-bind-key -ct vi-edit      u history-up
-bind-key -ct vi-edit      t cursor-right
+bind-key -ct vi-edit      j history-down
+bind-key -ct vi-edit      e history-up
+bind-key -ct vi-edit      u cursor-right
 bind-key -ct vi-edit      p paste
 bind-key -ct vi-edit      s switch-mode-substitute
 bind-key -ct vi-edit      w next-word
@@ -174,25 +174,21 @@ bind-key -ct vi-edit   Down history-down
 bind-key -ct vi-edit   Left cursor-left
 bind-key -ct vi-edit  Right cursor-right
 
-bind-key -t vi-choice     U page-up
-bind-key -t vi-choice     E page-down
-bind-key -t vi-choice Escape cancel
+bind-key -t vi-choice      Up page-up
+bind-key -t vi-choice    Down page-down
+bind-key -t vi-choice  Escape cancel
 bind-key -t vi-choice   Enter choose
 bind-key -t vi-choice   Space tree-toggle
 bind-key -t vi-choice       G end-of-list
-bind-key -t vi-choice       H top-line
-bind-key -t vi-choice       L bottom-line
 bind-key -t vi-choice       g start-of-list
-bind-key -t vi-choice       e down
-bind-key -t vi-choice       u up
+bind-key -t vi-choice       j down
+bind-key -t vi-choice       e up
 bind-key -t vi-choice       q cancel
 bind-key -t vi-choice  BSpace backspace
-bind-key -t vi-choice      Up up
-bind-key -t vi-choice    Down down
 bind-key -t vi-choice       h tree-collapse
 bind-key -t vi-choice       t tree-expand
-bind-key -t vi-choice    Left tree-collapse
-bind-key -t vi-choice   Right tree-expand
+bind-key -t vi-choice       o tree-collapse
+bind-key -t vi-choice       u tree-expand
 bind-key -t vi-choice       1 start-number-prefix
 bind-key -t vi-choice       2 start-number-prefix
 bind-key -t vi-choice       3 start-number-prefix
@@ -203,9 +199,9 @@ bind-key -t vi-choice       7 start-number-prefix
 bind-key -t vi-choice       8 start-number-prefix
 bind-key -t vi-choice       9 start-number-prefix
 
-bind-key -t vi-copy        E halfpage-down
-bind-key -t vi-copy        y copy-selection
-bind-key -t vi-copy        U halfpage-up
+bind-key -t vi-copy   Down halfpage-down
+bind-key -t vi-copy      y copy-selection
+bind-key -t vi-copy     Up halfpage-up
 bind-key -t vi-copy Escape clear-selection
 bind-key -t vi-copy      v begin-selection
 bind-key -t vi-copy    '"' start-named-buffer
@@ -225,30 +221,25 @@ bind-key -t vi-copy      9 start-number-prefix
 bind-key -t vi-copy      : goto-line
 bind-key -t vi-copy     \; jump-again
 bind-key -t vi-copy      ? search-backward
-bind-key -t vi-copy      A append-selection
 bind-key -t vi-copy      B previous-space
-bind-key -t vi-copy      D copy-end-of-line
-bind-key -t vi-copy      J next-space-end
+bind-key -t vi-copy      Y copy-end-of-line
+bind-key -t vi-copy      H next-space-end
 bind-key -t vi-copy      F jump-backward
 bind-key -t vi-copy      G history-bottom
-bind-key -t vi-copy      H top-line
-bind-key -t vi-copy      L bottom-line
-bind-key -t vi-copy      M middle-line
 bind-key -t vi-copy      N search-reverse
 bind-key -t vi-copy      V select-line
 bind-key -t vi-copy      W next-space
 bind-key -t vi-copy      ^ back-to-indentation
 bind-key -t vi-copy      b previous-word
-bind-key -t vi-copy      j next-word-end
+bind-key -t vi-copy      h next-word-end
 bind-key -t vi-copy      f jump-forward
 bind-key -t vi-copy      g history-top
-bind-key -t vi-copy      h cursor-left
-bind-key -t vi-copy      e cursor-down
-bind-key -t vi-copy      u cursor-up
-bind-key -t vi-copy      t cursor-right
+bind-key -t vi-copy      o cursor-left
+bind-key -t vi-copy      e cursor-up
+bind-key -t vi-copy      u cursor-right
+bind-key -t vi-copy      j cursor-down
 bind-key -t vi-copy      n search-again
-bind-key -t vi-copy      o other-end
 bind-key -t vi-copy      q cancel
-bind-key -t vi-copy      T jump-to-forward
-bind-key -t vi-copy    C-v rectangle-toggle
+bind-key -t vi-copy      t jump-to-forward
+bind-key -t vi-copy      T jump-to-backward
 bind-key -t vi-copy      w next-word
