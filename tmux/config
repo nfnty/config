@@ -118,6 +118,7 @@ bind-key n new-window
 bind-key N new-session
 bind-key y copy-mode
 bind-key p paste-buffer
+bind-key P command-prompt -p 'Save history to path:' 'capture-pane -S - ; save-buffer %1 ; delete-buffer'
 bind-key d detach-client
 bind-key r respawn-window
 bind-key R refresh-client
