@@ -1,6 +1,6 @@
 # Beware! This file is rewritten by htop when settings are changed in the interface.
 # The parser is also very primitive, and not human-friendly.
-fields=102 103 38 39 47 13 14 15 16 46 37 18 20 48 0 2 50 1
+fields=38 39 47 13 14 15 16 46 37 18 20 48 0 2 50 1
 sort_key=15
 sort_direction=1
 hide_threads=1
